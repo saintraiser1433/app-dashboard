@@ -1,0 +1,25 @@
+{
+  "application": [
+    {
+      "id": 1,
+      "name": "Cas",
+      "description": "Computerize Accounting System",
+      "status": "Active",
+      "guid": "sample text 1"
+    },
+    {
+      "id": 2,
+      "name": "Account Receivable Repository",
+      "description": "Application will consolidate custom application for AR",
+      "status": "Active",
+      "guid": "sample text 2"
+    },
+    {
+      "id": 3,
+      "name": "Asset Centric",
+      "description": "Asset Centric",
+      "status": "Active",
+      "guid": "sample text 3"
+    }
+  ]
+}
