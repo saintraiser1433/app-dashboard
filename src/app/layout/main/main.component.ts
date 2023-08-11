@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '@layout/header/header.component';
 import { SidebarComponent } from '@layout/sidebar/sidebar.component';
 import { FooterComponent } from '@layout/footer/footer.component';
+import { HeaderService } from 'app/shared/services/header.service';
 
 @Component({
   selector: 'app-main',
@@ -12,5 +13,5 @@ import { FooterComponent } from '@layout/footer/footer.component';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
-
+  headerService = inject(HeaderService);
 }

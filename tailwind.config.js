@@ -15,9 +15,10 @@ module.exports = {
         'font-roboto' : ['Roboto', 'sans-serif'],
         'font-heebo' : ['Heebo', 'sans-serif'],
         'font-rem' : ['REM', 'sans-serif'],
+        'font-bebas' : ['Bebas Neue', 'sans-serif'],
       }
     },
   },
-  plugins: [],
+  plugins: [ require('tailwind-scrollbar'),],
 }
 

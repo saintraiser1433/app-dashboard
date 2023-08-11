@@ -1,8 +1,11 @@
 <header
-  class="flex justify-between place-items-center bg-white h-12 shadow-lg px-4 text-white"
+  class="flex justify-between place-items-center h-12 shadow-lg px-4 text-white "
 >
   <div class="flex justify-center place-items-center">
-    <div class="text-gray-500 pr-3">
+    <div
+      class="text-gray-500 cursor-pointer mr-5 p-1 rounded-full hover:bg-gray-100"
+      (click)="onClick()"
+    >
       <fa-icon [icon]="faList"></fa-icon>
     </div>
     <input
