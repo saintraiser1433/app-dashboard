@@ -4,7 +4,7 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root'
 })
 export class HeaderService {
-  headerSignal = signal(false);
+  headerSignal = signal(true);
   constructor() { }
 
 

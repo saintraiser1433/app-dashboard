@@ -1,7 +1,7 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faSearch, faList, faMessage, faBell } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faAlignLeft, faX, faMessage, faBell } from '@fortawesome/free-solid-svg-icons';
 import { HeaderService } from 'app/shared/services/header.service';
 
 @Component({
@@ -13,9 +13,10 @@ import { HeaderService } from 'app/shared/services/header.service';
 })
 export class HeaderComponent {
   faSearch = faSearch;
-  faList = faList;
+  faList = faAlignLeft;
   faMessage = faMessage;
   faBell = faBell;
+  faX = faX;
   headerService = inject(HeaderService);
   onClick() {
     this.headerService.headerSignal.set(!this.headerService.headerSignal());

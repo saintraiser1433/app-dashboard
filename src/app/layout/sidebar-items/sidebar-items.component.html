@@ -1,0 +1,79 @@
+<div class="menu hover:menuhover" [ngClass]="!isToggle ? 'justify-center' : ''">
+  <div class="w-3">
+    <fa-icon [icon]="faHome"></fa-icon>
+  </div>
+  <span [ngClass]="!isToggle ? 'hidden' : 'text-xs'">Dashboard</span>
+</div>
+<div
+  class="menu hover:menuhover"
+  appTogglemenu
+  targetId="submenu1"
+  chevid="chevron1"
+  [ngClass]="!isToggle ? 'justify-center' : ''"
+>
+  <div class="w-3">
+    <fa-icon [icon]="faQrcode"></fa-icon>
+  </div>
+  <span [ngClass]="!isToggle ? 'hidden' : 'text-xs'">Application Manager</span>
+  <div class="ml-auto" id="chevron1" [ngClass]="!isToggle ? 'hidden' : ''">
+    <fa-icon [icon]="faChevronDown"></fa-icon>
+  </div>
+</div>
+
+<div
+  class="flex flex-col justify-center text-xs text-white mx-auto hidden"
+  id="submenu1"
+>
+  <span class="menu hover:menuhover pl-11">Application</span>
+  <span class="menu hover:menuhover pl-11">Module</span>
+  <span class="menu hover:menuhover pl-11">Sub Module</span>
+  <span class="menu hover:menuhover pl-11">Assign Module & Sub</span>
+</div>
+
+<div
+  class="menu hover:menuhover"
+  appTogglemenu
+  targetId="submenu2"
+  chevid="chevron2"
+  [ngClass]="!isToggle ? 'justify-center' : ''"
+>
+  <div class="w-3">
+    <fa-icon [icon]="faUser"></fa-icon>
+  </div>
+  <span [ngClass]="!isToggle ? 'hidden' : 'text-xs'">User Manager</span>
+  <div class="ml-auto" id="chevron2" [ngClass]="!isToggle ? 'hidden' : ''">
+    <fa-icon [icon]="faChevronDown"></fa-icon>
+  </div>
+</div>
+
+<div
+  class="flex flex-col justify-center text-xs text-white mx-auto hidden"
+  id="submenu2"
+>
+  <span class="menu hover:menuhover pl-11">User</span>
+  <span class="menu hover:menuhover pl-11">Request User</span>
+</div>
+
+<div
+  class="menu hover:menuhover"
+  appTogglemenu
+  targetId="submenu3"
+  chevid="chevron3"
+  [ngClass]="!isToggle ? 'justify-center' : ''"
+>
+  <div class="w-3">
+    <fa-icon [icon]="faCogs"></fa-icon>
+  </div>
+  <span [ngClass]="!isToggle ? 'hidden' : 'text-xs'">Roles Manager</span>
+  <div class="ml-auto" id="chevron3" [ngClass]="!isToggle ? 'hidden' : ''">
+    <fa-icon [icon]="faChevronDown"></fa-icon>
+  </div>
+</div>
+
+<div
+  class="flex flex-col justify-center text-xs text-white mx-auto hidden"
+  id="submenu3"
+>
+  <span class="menu hover:menuhover pl-11">Role</span>
+  <span class="menu hover:menuhover pl-11">Assign Module</span>
+</div>
