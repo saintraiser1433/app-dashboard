@@ -1,18 +1,94 @@
-<div class="flex">
+<div class="flex flex-row">
   <div
     [ngClass]="
-      headerService.headerSignal()
-        ? 'xs:w-[0%] sm:w-[0%] md:w-[26%] lg:w-[20%] xl:w-[18%] 2xl:w-[14%]'
-        : 'w-[0%]'
+      toggleSide()
+        ? 'sm:basis-[0%]  md:basis-[0%] lg:basis-[16%] xl:basis-[16%] 2xl:basis-[16%]'
+        : 'sm:basis-[0%] md:basis-[0%] lg:basis-[6%] xl:basis-[6%] 2xl:basis[6%] '
     "
   >
     <app-sidebar />
   </div>
   <div
-    class="sm:basis-[100%] md:basis-[74%] lg:basis-[80%] xl:basis-[82%] 2xl:basis-[86%]"
+    [ngClass]="
+      toggleSide()
+        ? 'sm:basis-[100%] md:basis-[100%] lg:basis-[84%] xl:basis-[84%] 2xl:basis[84%]'
+        : 'sm:basis-[100%] md:basis-[100%] lg:basis-[94%] xl:basis-[94%] 2xl:basis[94%]'
+    "
   >
-    <!-- [ngClass]="headerService.headerSignal() ? 'basis-[100%]' : '" -->
     <app-header />
+    <div class="flex flex-col pt-5 pb-12 px-5 mt-[65px] duration-300">
+      <div class="flex flex-row justify-between place-items-center pb-5">
+        <div>
+          <h4 class="text-lg font-semibold text-gray-600">
+            Application Manager
+          </h4>
+        </div>
+        <div class="text-xs text-gray-700">
+          <fa-icon [icon]="icon.faHome"></fa-icon>
+          > Application Manager
+        </div>
+      </div>
+      <div class="container mx-auto p-3 bg-white">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia esse
+        impedit sequi atque omnis repellat nihil. Omnis, neque natus tenetur
+        similique enim libero, nostrum, dicta doloribus tempora ut vero! Ullam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam totam
+        tempore qui mollitia reiciendis asperiores ut eveniet culpa neque ipsa?
+        Asperiores vitae nam nisi. Sed quibusdam delectus mollitia maxime
+        perferendis?\ Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nihil quaerat ut excepturi deserunt ullam fuga, illum a. Dicta eos
+        officiis voluptate ex quaerat, obcaecati laborum in placeat rem ipsum
+        ipsa.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Culpa minima explicabo error nesciunt quaerat non ab magnam dicta
+        voluptatibus? Similique ab quia quod laudantium velit nulla voluptates
+        tempora provident magnam? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Dolorum nesciunt odio cum odit! Aut ratione eos
+        possimus voluptatum fugit, assumenda sit nihil reprehenderit reiciendis
+        nam sint, hic eius perspiciatis deleniti. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Atque, doloremque eum deleniti excepturi
+        non fugiat architecto quo molestias maiores tempore dolores nostrum quis
+        distinctio error voluptates rem at iusto totam. Lorem, ipsum dolor sit
+        amet consectetur adipisicing elit. Enim, consequatur. Non quidem a
+        reiciendis voluptatum sequi minima aperiam, eligendi quis repellat ipsum
+        dolor voluptate fugiat et provident dolorem sint itaque! Lorem ipsum
+        dolor, sit amet consectetur adipisicing elit. Unde delectus voluptate
+        sunt! Molestias, magnam quisquam velit esse dolorem unde necessitatibus
+        doloremque? Recusandae id velit sint at assumenda ipsa, odio
+        ullam?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
+        optio porro, placeat quaerat consequuntur aliquam, adipisci alias
+        exercitationem necessitatibus ipsam unde blanditiis eos voluptas fugiat
+        esse eligendi atque. Commodi, sed!Loreml Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Assumenda veritatis temporibus nisi
+        deleniti quas repellendus perspiciatis at. Fugiat dolorum veritatis,
+        temporibus, iste neque animi ullam totam ratione officia velit
+        accusantium! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Sed neque illum ducimus, fuga aut eius id nobis voluptatem soluta!
+        Nihil, nisi veritatis unde quo molestiae repellat quia in a corrupti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum iste nam,
+        quisquam minima, blanditiis veritatis delectus quis rem, sequi pariatur
+        quibusdam eveniet. Repellendus, voluptatibus ratione. Perferendis saepe
+        sunt commodi placeat. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Natus tenetur accusamus explicabo mollitia, sint iste id magni in
+        nihil! Veritatis qui dolore ipsam temporibus. Libero eius rem doloremque
+        sit commodi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Beatae consequatur asperiores deleniti quibusdam quia, magnam natus!
+        Nisi quibusdam omnis maxime sapiente, earum, cumque hic facilis
+        accusamus dolore similique dolor repellat! Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Culpa numquam, deleniti facilis nemo
+        reprehenderit sed quo voluptates, ab aliquam ex quidem commodi,
+        doloremque cupiditate! Cum odit quisquam mollitia voluptatem doloremque?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
+        nihil ipsam. Nulla veritatis ex dolorem neque beatae aperiam voluptatem,
+        temporibus voluptatum fugiat ipsa in animi ea, enim necessitatibus porro
+        esse! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+        odio dolores veritatis iure consectetur recusandae illum, ut animi odit
+        labore porro et, minus quae voluptate accusamus expedita! Officiis, in.
+        Nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+        et libero laborum placeat, alias obcaecati sequi non reiciendis dolorem
+        amet! Deserunt, provident? At ipsam blanditiis maxime a, error
+        exercitationem id!
+      </div>
+    </div>
     <app-footer />
   </div>
 </div>

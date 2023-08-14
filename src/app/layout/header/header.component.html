@@ -1,36 +1,23 @@
-<header
-  class="fixed top-0 flex justify-between bg-white place-items-center h-16 shadow-lg px-4 text-white w-[80%]"
->  
-<!-- [ngClass]="
-headerService.headerSignal()
-  ? 'xs:w-[100%] sm:w-[100%] md:w-[74%] lg:w-[80%] xl:w-[82%] 2xl:w-[86%]'
-  : 'w-[100%]'
-" -->
-  <div class="flex justify-center place-items-center">
-    <div class="text-gray-500 cursor-pointer mr-5 p-1" (click)="onClick()">
-      <fa-icon [icon]="faList"></fa-icon>
-    </div>
-    <input
-      type="text"
-      class="rounded-l-full outline-none bg-sys-outline pl-6 h-10 text-black w-72 text-xs"
-      placeholder="Search for anything"
-    />
-    <div
-      class="flex place-items-center bg-sys-outline pr-6 h-10 rounded-r-full text-gray-400"
-    >
-      <fa-icon [icon]="faSearch"></fa-icon>
-    </div>
+<div
+  class="myheadercss"
+  [ngClass]="
+    toggleSide()
+      ? 'sm:w-[100%] md:w-[100%] lg:w-[84%] xl:w-[84%] 2xl:w-[84%]'
+      : 'sm:w-[100%] md:w-[100%] lg:w-[94%] xl:w-[94%] 2xl:w-[94%]'
+  "
+>
+  <div
+    class="flex justify-center place-items-center text-gray-500 cursor-pointer"
+    (click)="onClick()"
+  >
+    <ng-container *ngIf="toggleSide(); else x">
+      <fa-icon [icon]="icons.faList"></fa-icon>
+    </ng-container>
+    <ng-template #x>
+      <fa-icon [icon]="icons.faX"></fa-icon>
+    </ng-template>
   </div>
-
-  <div class="flex justify-center place-items-center text-gray-500 gap-4">
-    <div>
-      <fa-icon [icon]="faBell"></fa-icon>
-    </div>
-    <div>
-      <fa-icon [icon]="faMessage"></fa-icon>
-    </div>
-    <div class="flex place-items-center bg-white rounded-full">
-      <img src="assets/profile.jpg" class="h-8 w-8 rounded-full p-0.5" />
-    </div>
+  <div class="flex place-items-center shadow-lg rounded-full">
+    <img src="assets/profile.jpg" class="h-9 w-9 rounded-full" alt="" />
   </div>
-</header>
+</div>

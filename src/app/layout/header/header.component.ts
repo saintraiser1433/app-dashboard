@@ -1,7 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faSearch, faAlignLeft, faX, faMessage, faBell } from '@fortawesome/free-solid-svg-icons';
+import * as fonts from '@fortawesome/free-solid-svg-icons';
 import { HeaderService } from 'app/shared/services/header.service';
 
 @Component({
@@ -12,14 +12,12 @@ import { HeaderService } from 'app/shared/services/header.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  faSearch = faSearch;
-  faList = faAlignLeft;
-  faMessage = faMessage;
-  faBell = faBell;
-  faX = faX;
+  icons = fonts;
   headerService = inject(HeaderService);
   onClick() {
     this.headerService.headerSignal.set(!this.headerService.headerSignal());
   }
+  toggleSide = computed(() => this.headerService.headerSignal());
+
 
 }

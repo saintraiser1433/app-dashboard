@@ -26,6 +26,9 @@
     "paths": {
       "@pages/*": ["app/pages/*"],
       "@layout/*": ["app/layout/*"],
+      "jszip": [
+        "node_modules/jszip/dist/jszip.min.js"
+      ]
     },
   },
   "angularCompilerOptions": {

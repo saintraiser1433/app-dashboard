@@ -5,18 +5,38 @@
 
 @layer base {
   html {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
   }
 }
+
+
+
+
 
 @layer components {
   .menu {
     @apply flex place-items-center py-2 text-white gap-2 px-4 cursor-pointer gap-4;
   }
 
+
+
   .menuhover {
     @apply text-slate-200 bg-pink-700;
   }
+
+  .myheadercss {
+    @apply fixed top-0 right-0 h-16 flex justify-between place-items-center bg-white shadow-lg px-5 duration-300;
+  }
+
+  .mysidebarcss {
+    @apply fixed top-0 left-0 bg-sys-sidebar h-screen shadow-lg duration-300;
+  }
+
+  .myfootercss {
+    @apply fixed bottom-0 right-0 bg-white flex justify-between place-items-center text-sm h-8 px-3 shadow-inner duration-300;
+  }
+
+
 
   /* .submenuhover {
     @apply text-slate-200 bg-;

@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { faQrcode, faHome, faChevronDown, faUser, faCogs, faList } from '@fortawesome/free-solid-svg-icons';
+import * as icon from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TogglemenuDirective } from 'app/shared/directives/togglemenu.directive';
-
+import { SideBarItems } from '@layout/sidebar';
+import { HeaderService } from 'app/shared/services/header.service';
 @Component({
   selector: 'app-sidebar-items',
   standalone: true,
@@ -12,11 +13,11 @@ import { TogglemenuDirective } from 'app/shared/directives/togglemenu.directive'
   styleUrls: ['./sidebar-items.component.css']
 })
 export class SidebarItemsComponent {
-  faQrcode = faQrcode;
-  faHome = faHome;
-  faChevronDown = faChevronDown;
-  faUser = faUser;
-  faCogs = faCogs;
-  faList = faList;
+  icon = icon;
+  sidebarItems = SideBarItems;
   @Input() isToggle: boolean;
+  headerService = inject(HeaderService);
+  onClick() {
+    this.headerService.headerSignal.set(true);
+  }
 }

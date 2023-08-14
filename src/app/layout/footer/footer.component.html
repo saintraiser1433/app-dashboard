@@ -1,6 +1,11 @@
 <footer
-  class="fixed bottom-0 w-[84%] bg-white flex justify-between place-items-center text-sm h-8 px-3 shadow-inner"
+  class="myfootercss text-gray-500"
+  [ngClass]="
+    toggleSide()
+      ? 'sm:w-[75%] md:w-[80%] lg:w-[84%] xl:w-[84%] 2xl:w-[84%]'
+      : 'sm:w-[100%] md:w-[100%] lg:w-[94%] xl:w-[94%] 2xl:w-[94%]'
+  "
 >
-  <span class="text-gray-500">Developed by: OFIN TEAM</span>
-  <span class="text-gray-500">Version: 1.1</span>
+  <span>Developed by: OFIN TEAM</span>
+  <span>Version: 1.1</span>
 </footer>

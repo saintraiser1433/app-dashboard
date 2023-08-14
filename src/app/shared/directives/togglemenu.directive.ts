@@ -12,7 +12,7 @@ export class TogglemenuDirective {
   @HostListener('click') onClick() {
     if (this.targetId) {
       const targetMenu = document.getElementById(this.targetId);
-      const chevron = document.getElementById(this.chevid);
+      const chevron = document.getElementById('c' + this.targetId);
       if (targetMenu) {
         targetMenu.classList.toggle('hidden');
         chevron.classList.toggle('rotate-90');
