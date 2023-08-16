@@ -17,7 +17,7 @@ export const SideBarItems: sidebarItem[] = [
     {
         id: 1,
         title: 'Dashboard',
-        link: './dashboard',
+        link: '',
         submenu: false,
         icon: 'faHome',
     },
@@ -29,20 +29,20 @@ export const SideBarItems: sidebarItem[] = [
         submenuItems: [
             {
                 title: 'Application',
-                link: './app',
+                link: 'application/app',
 
             },
             {
                 title: 'Module',
-                link: './module',
+                link: 'application/module',
             },
             {
                 title: 'Sub Module',
-                link: './submodule',
+                link: 'application/sub-module',
             },
             {
                 title: 'Assign Module & Sub',
-                link: './assignmod',
+                link: 'application/assign-module',
             },
         ]
     },

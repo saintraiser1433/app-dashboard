@@ -1,0 +1,56 @@
+<div class="flex justify-center place-item-center">
+  <dx-data-grid
+    id="gridContainer"
+    [dataSource]="customDataSource"
+    keyExpr="id"
+    [repaintChangesOnly]="true"
+    [showBorders]="true"
+  >
+    <dxo-filter-row [visible]="true" [applyFilter]="true"></dxo-filter-row>
+    <dxo-search-panel
+      [visible]="true"
+      [width]="240"
+      placeholder="Search..."
+    ></dxo-search-panel>
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-load-panel [enabled]="true"></dxo-load-panel>
+    <dxo-scrolling rowRenderingMode="virtual"></dxo-scrolling>
+    <dxo-paging [pageSize]="20"></dxo-paging>
+    <dxo-pager
+      [visible]="true"
+      [showInfo]="true"
+      [showPageSizeSelector]="true"
+      [showNavigationButtons]="true"
+    >
+    </dxo-pager
+    >
+    <dxo-editing
+      mode="popup"
+      [allowUpdating]="true"
+      [allowAdding]="true"
+      [allowDeleting]="true"
+    >
+      <dxo-popup
+        title="Employee Info"
+        [showTitle]="true"
+        [width]="700"
+        [height]="525"
+      >
+      </dxo-popup>
+      <dxo-form>
+        <dxi-item itemType="group" [colCount]="2" [colSpan]="2">
+          <dxi-item dataField="name"></dxi-item>
+          <dxi-item dataField="description"></dxi-item>
+          <dxi-item dataField="status"></dxi-item>
+          <dxi-item dataField="guid"> </dxi-item>
+        </dxi-item>
+      </dxo-form>
+    </dxo-editing>
+
+    <dxi-column dataField="name"></dxi-column>
+    <dxi-column dataField="description"></dxi-column>
+    <dxi-column dataField="status"></dxi-column>
+    <dxi-column dataField="guid"> </dxi-column>
+  </dx-data-grid>
+</div>

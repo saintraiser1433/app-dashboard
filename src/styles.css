@@ -4,10 +4,15 @@
 
 
 @layer base {
-  html {
+  * {
     font-family: 'Poppins', sans-serif;
   }
+
+
+
 }
+
+
 
 
 
@@ -17,6 +22,8 @@
   .menu {
     @apply flex place-items-center py-2 text-white gap-2 px-4 cursor-pointer gap-4;
   }
+
+
 
 
 
@@ -35,6 +42,36 @@
   .myfootercss {
     @apply fixed bottom-0 right-0 bg-white flex justify-between place-items-center text-sm h-8 px-3 shadow-inner duration-300;
   }
+
+
+  td[role=columnheader] {
+    padding: 10px 0px 10px 0px;
+    text-align: left !important;
+    font-size: 12px !important;
+    background-color: #eaecf4 !important;
+    color: #6e707e !important;
+    border-color: #e3e6f0 !important;
+  }
+
+  td[role=gridcell] {
+    text-align: left !important;
+    font-size: 12px !important;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

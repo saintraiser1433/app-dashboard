@@ -1,9 +1,9 @@
 <div
-  class="myheadercss"
+  class="myheadercss z-40"
   [ngClass]="
     toggleSide()
-      ? 'sm:w-[100%] md:w-[100%] lg:w-[84%] xl:w-[84%] 2xl:w-[84%]'
-      : 'sm:w-[100%] md:w-[100%] lg:w-[94%] xl:w-[94%] 2xl:w-[94%]'
+      ? 'sm:w-[100%] md:w-[100%] lg:w-[84%] xl:w-[84%] 2xl:w-[90%]'
+      : 'sm:w-[100%] md:w-[100%] lg:w-[94%] xl:w-[94%] 2xl:w-[97%]'
   "
 >
   <div
@@ -17,6 +17,14 @@
       <fa-icon [icon]="icons.faX"></fa-icon>
     </ng-template>
   </div>
+
+  <div
+    class="sm:flex justify-center place-items-center gap-2 md:flex justify-center place-items-center gap-2 xl:hidden lg:hidden 2xl:hidden"
+  >
+    <img src="assets/kcclogo.png" class="h-6" alt="" />
+    <span class="font-semibold text-lg">TEST APP</span>
+  </div>
+
   <div class="flex place-items-center shadow-lg rounded-full">
     <img src="assets/profile.jpg" class="h-9 w-9 rounded-full" alt="" />
   </div>

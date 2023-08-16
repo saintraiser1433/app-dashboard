@@ -6,8 +6,8 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'xs': {'min': '320px', 'max': '480px'},
-      'sm': {'min': '481px', 'max': '768px'},
+      'xs': {'min': '320px', 'max': '639px'},
+      'sm': {'min': '640px', 'max': '768px'},
       'md': {'min': '769px', 'max': '1023px'},
       'lg': {'min': '1024px', 'max': '1279px'},
       'xl': {'min': '1280px', 'max': '1535px'},
@@ -24,10 +24,9 @@ module.exports = {
       fontFamily: {
         'poppins' : ['Poppins', 'sans-serif'],
         'roboto' : ['Roboto', 'sans-serif'],
-        'heebo' : ['Heebo', 'sans-serif'],
-        'rem' : ['REM', 'sans-serif'],
-        'bebas' : ['Bebas Neue', 'sans-serif'],
       },
+ 
+
  
     },
   },

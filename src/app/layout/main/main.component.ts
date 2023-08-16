@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import * as icon from '@fortawesome/free-solid-svg-icons';
 import { FooterComponent } from '@layout/footer/footer.component';
@@ -9,7 +10,7 @@ import { HeaderService } from 'app/shared/services/header.service';
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, SidebarComponent, FooterComponent, FontAwesomeModule],
+  imports: [CommonModule, HeaderComponent, RouterOutlet, SidebarComponent, FooterComponent, FontAwesomeModule],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
